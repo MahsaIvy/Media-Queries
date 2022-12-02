@@ -1,0 +1,70 @@
+body {
+  margin: 20px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "card1 card2 card3";
+}
+.card1 {
+  grid-area: card1;
+}
+.card2 {
+  grid-area: card2;
+}
+.card3 {
+  grid-area: card3;
+}
+.card1,
+.card2,
+.card3 {
+  position: relative;
+  border: 1px solid black;
+  max-width: fit-content;
+  border-radius: 20px;
+  background-image: linear-gradient(rgb(133, 132, 132), rgb(192, 189, 189));
+  margin: 30px;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.avatar {
+  margin: 4px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dots {
+  margin-left: 120px;
+}
+
+@media (max-width: 768px) {
+  body {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "card1 card2"
+      "card3 .";
+    justify-content: center;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3";
+    justify-content: center;
+  }
+}
