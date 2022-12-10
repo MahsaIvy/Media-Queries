@@ -44,27 +44,19 @@ body {
 .dots {
   margin-left: 120px;
 }
-
 @media (max-width: 768px) {
   body {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "card1 card2"
-      "card3 .";
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 }
 @media (max-width: 375px) {
   body {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-      "card1"
-      "card2"
-      "card3";
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 }
